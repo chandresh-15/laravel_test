@@ -17,7 +17,7 @@ Route::group(['prefix'=> 'employee' , 'as' => 'employee' ], function (){
     Route::get('/', [EmployeesController::class,'index'])->name('.index');
     Route::get('/show',[EmployeesController::class,'show'])->name('.show');
     Route::get('/create',[EmployeesController::class,'create'])->name('.create');
-    Route::post('/store',[EmployeesController::class,'store'])->name('.store');
+    Route::post('/store',[EmployeesController::class,'stores'])->name('.store');
     Route::get('/{employees}/edit', [EmployeesController::class, 'edit'])->name('.edit');
     Route::put('/{employees}', [EmployeesController::class, 'update'])->name('.update');
     Route::delete('/{employees}', [EmployeesController::class,'destroy'])->name('.destroy');
